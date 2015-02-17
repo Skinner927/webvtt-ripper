@@ -1,0 +1,29 @@
+﻿<Window x:Class="WebVTT_Ripper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WebVTT Ripper" Height="200" Width="500" ResizeMode="NoResize">
+    <Grid Margin="7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Name="WebVttBtn" Click="Browse_Click">WebVTT File</Button>
+            <TextBox Grid.Row="0" Grid.Column="1" Name="WebVttTextBox"></TextBox>
+            <Button Grid.Row="1" Grid.Column="0" Name="OutputBtn" Click="Browse_Click">Output File</Button>
+            <TextBox Grid.Row="1" Grid.Column="1" Name="OutputTextBox"></TextBox>
+        </Grid>
+
+        <TextBox Grid.Row="1" Name="MessageBox" IsReadOnly="True"></TextBox>
+        <Button Grid.Row="2" Name="StartBtn" Click="StartBtn_OnClick">Start</Button>
+    </Grid>
+</Window>
